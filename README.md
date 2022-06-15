@@ -1,7 +1,3 @@
 # CS170Project
 
-My project contains various solvers. To replicate my results run python/solve_all.py on all of my solvers: solve_naive, solve_greedy, solve_random, solve_LPmin, solve_LPnum, solve_LPmax, solve_LP3, solve_LP2, solve_LP4, solve_LP5, and solve_LP6. Then, use merge.py to combine them all into one folder.
-
-NOTE: The results you get may not be exactly the same ones I got, but most numbers should be pretty close
-
-NOTE: The LP solvers do take a while to run on large inputs. LP6 takes ESPECIALLY long, but usually gives the best results.
+I used a multitude of approaches for this project, but the best performing strategy were my LP solvers. When I first read the problem description, it immediately reminded me of a linear programming problem because of the constraints and penalty objective function. To implement my LP solvers, I used the python open-source library PuLP which allows users to create LP variables, add constraints, and add an objective function. You can then solve the LP by calling prob.solve(). I think linear programming was a good approach because, although the objective function could not be specified exactly as it relied on the locations of the towers, I was able to keep my variables and constraints the same for every LP solver. Basically, my approach was to use the same variables and constraints for all solvers and just change the objective function to minimize the number of towers, favor tower locations closer to cities, favor locations farther from cities, minimize tower overlap, etc.
